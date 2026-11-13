@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#edeae3">
+<title>Аромат Кислорода — аромат, необходимый для дыхания</title>
+<meta name="description" content="Аромат Кислорода. Статусный аксессуар с оригинальной воздушной пропиткой уникального запаха.">
+<script>document.documentElement.className = 'js';</script>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+<div class="loader" id="loader" aria-hidden="true">
+  <span class="mono">Концентрация O₂ в помещении</span>
+  <strong><span id="loaderNum">0</span>&thinsp;%</strong>
+  <span class="mono">Аромат Кислорода / № 001</span>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <a class="logo" href="#top" aria-label="Аромат Кислорода"><i></i><i></i><span>Аромат Кислорода</span></a>
+  <nav class="nav-links mono">
+    <a href="#notes">Аромат</a>
+    <a href="#values">Ценности</a>
+    <a href="#formula">Формула</a>
+    <a href="#control">Клиентам</a>
+  </nav>
+  <a class="nav-buy mono" href="#buy">Купить — 1 999 ₽</a>
+</header>
+
+<main id="top">
+
+  <!-- 00 HERO -->
+  <section class="hero" id="hero">
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="o2 hero-fallback" aria-hidden="true"><i><b>O</b></i><i><b>O</b></i></div>
+
+    <div class="photo" id="photo"><img id="photoImg" alt="Ароматизатор «Аромат Кислорода»" draggable="false"></div>
+
+    <div class="hero-meta mono">
+      <span>(№ 001)</span>
+      <span>Оригинальная воздушная пропитка</span>
+      <span class="hide-m">Картон / шнур / воздух</span>
+    </div>
+
+    <h1 class="hero-title" id="heroTitle" aria-label="Аромат Кислорода">
+      <span class="line"><span>Аромат</span></span>
+      <span class="line"><span>Кислорода</span></span>
+    </h1>
+
+    <div class="hero-bottom">
+      <p class="hero-lead">Знакомый аромат, необходимый для&nbsp;осуществления процесса дыхания.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#buy" data-cursor="взять"><span>Купить за 1 999 ₽</span></a>
+        <span class="mono hint">Потяните за ароматизатор ↗</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker">
+      <span>Не перебивает запахи</span><i></i><span>Не вызывает аллергию</span><i></i><span>Не вызывает головную боль</span><i></i><span>Статусный аксессуар</span><i></i><span>Всеобщая узнаваемость</span><i></i>
+    </div>
+  </div>
+
+  <!-- 01 MANIFESTO -->
+  <section class="manifesto" id="manifesto">
+    <p class="label mono">(01) Манифест</p>
+    <p class="scrub" id="scrub">Мы не добавили в воздух ничего. Поэтому он пахнет ровно так, как пахнет там, где вы находитесь. Мы считаем это высшей формой персонализации и берём за неё 1 999 рублей.</p>
+  </section>
+
+  <!-- 02 NOTES: horizontal -->
+  <section class="pin" id="notes">
+    <div class="pin-stick">
+      <div class="pin-head">
+        <p class="label mono">(02) Пирамида аромата</p>
+        <p class="mono pin-count"><span id="pinNow">01</span> / 04</p>
+      </div>
+      <div class="pin-track" id="pinTrack">
+        <article class="panel panel-intro">
+          <h2>Композиция, которую вы уже <em>знаете</em></h2>
+          <p>Аромат раскрывается постепенно и полностью зависит от того, где вы находитесь.</p>
+        </article>
+        <article class="panel">
+          <span class="big-num">01</span>
+          <div>
+            <p class="mono">Верхние ноты / 0–15 мин</p>
+            <h3>То, чем пахнет вокруг вас прямо сейчас</h3>
+            <p>Раскрываются мгновенно, с первого вдоха.</p>
+          </div>
+        </article>
+        <article class="panel">
+          <span class="big-num">02</span>
+          <div>
+            <p class="mono">Ноты сердца / 15 мин – 4 ч</p>
+            <h3>То, чем продолжает пахнуть вокруг вас</h3>
+            <p>Стойкость подтверждена всеми, кто проверял.</p>
+          </div>
+        </article>
+        <article class="panel">
+          <span class="big-num">03</span>
+          <div>
+            <p class="mono">Базовые ноты / шлейф</p>
+            <h3>То, чем здесь пахло до покупки</h3>
+            <p>Сохраняется на протяжении всей жизни владельца.</p>
+          </div>
+        </article>
+      </div>
+      <div class="pin-bar"><i id="pinBar"></i></div>
+    </div>
+  </section>
+
+  <!-- 03 VALUES -->
+  <section class="section" id="values">
+    <div class="sec-head">
+      <p class="label mono">(03) Ценностное предложение</p>
+      <h2 data-split>Четыре причины <em>дышать</em> с нами</h2>
+    </div>
+    <ul class="vals">
+      <li class="val" data-cursor="вдох">
+        <span class="mono">01</span>
+        <h3>Не перебивает запахи</h3>
+        <p>Ни один существующий запах не пострадал. Вы продолжаете вкушать окружающую обстановку в полном объёме.</p>
+      </li>
+      <li class="val" data-cursor="вдох">
+        <span class="mono">02</span>
+        <h3>Не вызывает аллергию и головную боль</h3>
+        <p>Состав пропитки исключает любые раздражители. Как и любые другие компоненты.</p>
+      </li>
+      <li class="val" data-cursor="вдох">
+        <span class="mono">03</span>
+        <h3>Повод гордиться собой</h3>
+        <p>Каждый взгляд на аксессуар напоминает, какой вы всё-таки молодец, что купили «Аромат Кислорода».</p>
+      </li>
+      <li class="val" data-cursor="вдох">
+        <span class="mono">04</span>
+        <h3>Статусный аксессуар</h3>
+        <p>Всеобщая узнаваемость. Этот аромат знаком каждому человеку с момента рождения.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 04 NUMBERS -->
+  <section class="section nums" id="nums">
+    <p class="label mono">(04) Показатели</p>
+    <div class="nums-grid">
+      <div class="num rise"><strong><span data-count="100">0</span><sup>%</sup></strong><p>узнаваемость аромата среди дышащих</p></div>
+      <div class="num rise"><strong><span data-count="0" data-from="99">99</span></strong><p>аллергенов, отдушек и запахов в составе</p></div>
+      <div class="num rise"><strong><span data-count="20000">0</span></strong><p>вдохов в сутки совершает наш клиент</p></div>
+      <div class="num rise"><strong><span data-count="1999">0</span><sup>₽</sup></strong><p>стоимость осознанного дыхания</p></div>
+    </div>
+  </section>
+
+  <!-- 05 COMPARE -->
+  <section class="section" id="compare">
+    <div class="sec-head">
+      <p class="label mono">(05) Сравнение</p>
+      <h2 data-split>Конкуренты <em>пахнут.</em> Мы — нет</h2>
+    </div>
+    <div class="spec" role="table">
+      <div class="spec-row spec-top mono" role="row"><span>Параметр</span><span>Обычный ароматизатор</span><span>Аромат Кислорода</span></div>
+      <div class="spec-row rise" role="row"><span>Перебивает запахи</span><span>Да</span><b>Нет</b></div>
+      <div class="spec-row rise" role="row"><span>Вызывает аллергию</span><span>Возможно</span><b>Нет</b></div>
+      <div class="spec-row rise" role="row"><span>Вызывает головную боль</span><span>Возможно</span><b>Нет</b></div>
+      <div class="spec-row rise" role="row"><span>Необходим для дыхания</span><span>Нет</span><b>Да</b></div>
+      <div class="spec-row rise" role="row"><span>Срок действия аромата</span><span>30 дней</span><b>Не установлен</b></div>
+      <div class="spec-row rise" role="row"><span>Повод гордиться собой</span><span>Нет</span><b>Да</b></div>
+    </div>
+  </section>
+
+  <!-- 06 EDITIONS -->
+  <section class="section" id="editions">
+    <div class="sec-head">
+      <p class="label mono">(06) Лимитированные коллекции</p>
+      <h2 data-split>Три издания. <em>Одна</em> формула</h2>
+    </div>
+    <div class="eds">
+      <article class="ed rise" data-cursor="идентично">
+        <div class="ed-top mono"><span>Ed. 01</span><span>Тираж ограничен</span></div>
+        <div class="o2"><i><b>O</b></i><i><b>O</b></i></div>
+        <h3>Альпийское утро</h3>
+        <p>Для тех, кто находится в Альпах утром.</p>
+      </article>
+      <article class="ed rise" data-cursor="идентично">
+        <div class="ed-top mono"><span>Ed. 02</span><span>Тираж ограничен</span></div>
+        <div class="o2"><i><b>O</b></i><i><b>O</b></i></div>
+        <h3>Салон автомобиля</h3>
+        <p>Создано совместно с ведущими автомойками.</p>
+      </article>
+      <article class="ed rise" data-cursor="идентично">
+        <div class="ed-top mono"><span>Ed. 03</span><span>Тираж ограничен</span></div>
+        <div class="o2"><i><b>O</b></i><i><b>O</b></i></div>
+        <h3>Кабинет технологии</h3>
+        <p>Пахнет знаниями, если они есть в помещении.</p>
+      </article>
+    </div>
+    <p class="mono foot-note">Различия между изданиями охраняются коммерческой тайной.</p>
+  </section>
+
+  <!-- 07 FORMULA (ink) -->
+  <section class="section" id="formula" data-ink>
+    <div class="sec-head">
+      <p class="label mono">(07) Ключевой ресурс</p>
+      <h2 data-split>Формула пропитки <em>засекречена</em></h2>
+    </div>
+    <div class="doc rise">
+      <div class="doc-top mono"><span>Документ O2-001 / лист 1 из 1</span><span class="stamp">Тайна</span></div>
+      <p>Основа: картон высшего сорта, <button class="redact" type="button">двухслойный беленый</button>.</p>
+      <p>Пропитка наносится методом <button class="redact" type="button">естественного контакта с атмосферой</button> в течение <button class="redact" type="button">ноль</button> часов.</p>
+      <p>Активный компонент: <button class="redact" type="button">отсутствует по технологии</button>, концентрация <button class="redact" type="button">двадцать один процент</button>.</p>
+      <p>Условия хранения: <button class="redact" type="button">в любом помещении с воздухом</button>.</p>
+      <p class="doc-log mono" id="docLog">&gt; Нажмите на закрытый фрагмент, чтобы запросить доступ.</p>
+    </div>
+  </section>
+
+  <!-- 08 CONTROL (ink) -->
+  <section class="section" id="control" data-ink>
+    <div class="sec-head">
+      <p class="label mono">(08) Взаимоотношения с клиентами</p>
+      <h2 data-split>Мы всегда <em>рядом.</em> Буквально</h2>
+    </div>
+    <div class="ctrl">
+      <article class="ctrl-item rise">
+        <p class="mono">A / Гарантия</p>
+        <h3>Скидка на повторную покупку</h3>
+        <p>Если «Аромат Кислорода» перестанет работать, вы получите скидку на следующий экземпляр. За всю историю наблюдений таких случаев не зафиксировано.</p>
+      </article>
+      <article class="ctrl-item rise">
+        <p class="mono">B / Лояльность</p>
+        <h3>Контроль подачи</h3>
+        <p>Мы оставляем за собой право в любой момент перекрыть клиенту доступ к кислороду. Это поддерживает высокий уровень лояльности.</p>
+        <button class="valve" id="valveBtn" type="button" data-cursor="не надо">
+          <span class="valve-knob"><i></i></span>
+          <span class="mono" id="valveLabel">Демонстрация перекрытия</span>
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <!-- 09 PARTNERS -->
+  <section class="section" id="partners">
+    <div class="sec-head">
+      <p class="label mono">(09) Ключевые партнёры</p>
+      <h2 data-split>Нам доверяют те, кто <em>дышит</em></h2>
+    </div>
+    <ul class="partners">
+      <li class="rise"><span class="mono">01</span>Производители картона</li>
+      <li class="rise"><span class="mono">02</span>Типографии</li>
+      <li class="rise"><span class="mono">03</span>Маркетплейсы</li>
+      <li class="rise"><span class="mono">04</span>Автомойки</li>
+      <li class="rise"><span class="mono">05</span>Блогеры</li>
+    </ul>
+    <div class="ctrl two">
+      <article class="ctrl-item rise">
+        <p class="mono">Потребительские сегменты</p>
+        <h3>Для кого создан продукт</h3>
+        <p>Для людей, нуждающихся в покупке воздуха, и для людей, чувствительных к запахам. Целевая аудитория: все, кто дышит.</p>
+      </article>
+      <article class="ctrl-item rise">
+        <p class="mono">Карьера</p>
+        <h3>Зарплата воздухом</h3>
+        <p>Мы открыты для специалистов по производству, фасовке и дизайну. Заработная плата выплачивается воздухом, своевременно и в полном объёме.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 10 BUY -->
+  <section class="buy" id="buy">
+    <p class="label mono">(10) Оформление заказа</p>
+    <div class="buy-grid">
+      <div class="buy-price">
+        <p class="mono"><s id="oldPrice" hidden>1 999 ₽</s><span id="priceNote">Один экземпляр. Картон, шнур, воздушная пропитка</span></p>
+        <strong id="price">1 999 ₽</strong>
+      </div>
+      <form class="buy-form" id="buyForm" novalidate>
+        <label class="mono" for="phone">Номер телефона</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+        <p class="error mono" id="phoneError" role="alert"></p>
+        <button class="btn btn-xl" type="submit" id="buyBtn" data-cursor="да"><span>Купить</span></button>
+        <p class="mono fine">Нажимая «Купить», вы подтверждаете, что дышите добровольно.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-top mono">
+    <a class="footer-brand" href="#top" aria-label="Аромат Кислорода — наверх">
+      <span class="footer-mark" aria-hidden="true"><i></i><i></i></span>
+      <span>Аромат Кислорода</span>
+    </a>
+    <span class="footer-project">Проект по технологии</span>
+    <a class="footer-up" href="#top">Наверх <span aria-hidden="true">↑</span></a>
+  </div>
+  <div class="footer-main">
+    <div class="footer-statement">
+      <p class="mono footer-kicker">Оригинальная воздушная пропитка / № 001</p>
+      <p class="footer-word" id="footerWord">Дышите<span>.</span></p>
+    </div>
+    <div class="footer-aside">
+      <p>Ничего лишнего.<br>Только вы и воздух.</p>
+      <a class="footer-cta" href="#buy">
+        <span>Купить за 1 999 ₽</span>
+        <i aria-hidden="true">↗</i>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="mono">© 2026 Аромат Кислорода</span>
+    <nav class="footer-nav mono" aria-label="Навигация в подвале">
+      <a href="#notes">Аромат</a>
+      <a href="#values">Ценности</a>
+      <a href="#formula">Формула</a>
+      <a href="#control">Клиентам</a>
+    </nav>
+  </div>
+  <p class="footer-legal">Продукт не является лекарственным средством и источником кислорода. Компания оставляет за собой право перекрыть доступ к кислороду без объяснения причин.</p>
+</footer>
+
+<div class="status mono" id="status">
+  <span><i class="dot"></i><span id="statusText">Подача O₂: активна</span></span>
+  <span class="hide-m">O₂ 20,95 %</span>
+  <span>Вдохов на сайте: <b id="breaths">0</b></span>
+</div>
+
+<dialog id="doneDialog" class="dialog">
+  <p class="mono">Заявка № <span id="doneId">000001</span></p>
+  <h3>Отлично.</h3>
+  <p>Если у вас слишком много денег, мы выдадим вам «Аромат Кислорода».</p>
+  <p class="mono fine">Номер <span id="doneNum"></span> принят к сведению. Продолжайте дышать в обычном режиме.</p>
+  <button class="btn" id="doneClose" type="button"><span>Продолжить дышать</span></button>
+</dialog>
+
+<div class="cut" id="cut" hidden>
+  <p class="mono">Уведомление для клиента</p>
+  <h3>Доступ к кислороду ограничен</h3>
+  <strong id="cutTimer">5</strong>
+  <p>Подача возобновится автоматически. Благодарим за лояльность.</p>
+  <button class="btn btn-light" id="cutBtn" type="button"><span>Возобновить подачу</span></button>
+</div>
+
+<script src="assets/vendor/three.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
